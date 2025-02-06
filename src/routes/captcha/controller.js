@@ -8,7 +8,7 @@ export const getCaptcha = (req, res) => {
   } catch (error) {
     res.status(500).json({ error: 'Error generating CAPTCHA' });
   }
-  return res;
+  // return res;
 };
 export const validateCaptchaMiddleware = (req, res, next) => {
   const { captchaText, captchaHash } = req.body;
