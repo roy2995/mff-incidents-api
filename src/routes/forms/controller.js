@@ -13,7 +13,7 @@ export const getIncidencias = async (req, res) => {
 export const createIncidencia = async (req, res) => {
   const { name, email, phone, type_incident_id, image_incident, date_incident, description, isauthorized } = req.body;
 
-  if (!name || !email || !date_incident || !description || !type_incident_id || !isauthorized) {
+  if (!name || !email || !date_incident || !description || !type_incident_id || !isauthorized || !phone) {
     return res.status(400).json({ error: 'Todos los campos son obligatorios' });
   }
 

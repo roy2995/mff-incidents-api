@@ -13,8 +13,8 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: '*', // Or specify your frontend origin
-  exposedHeaders: ['X-Captcha-Hash'] // 👈 Add this line
+  origin: '*',
+  exposedHeaders: ['X-Captcha-Hash']
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
